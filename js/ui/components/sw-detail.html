@@ -1,0 +1,22 @@
+<div ng-if="$ctrl.endpoint === 'starships'">
+    <div>Name: {{ $ctrl.data.name }}</div>
+    <ul>
+        <li ng-repeat="film in $ctrl.data.films">
+            <md-button ng-click='$ctrl.goToDetail(film)'>
+                {{ film }}
+            </md-button>
+        </li>
+    </ul>
+</div>
+
+<div ng-if="$ctrl.endpoint === 'people'">
+    <div>Eye Color: {{ $ctrl.data.eye_color }}</div>
+</div>
+
+<div ng-if="$ctrl.endpoint === 'planets'">
+    <div>Climate: {{ $ctrl.data.climate }}</div>
+</div>
+
+<div ng-if="$ctrl.endpoint === 'films'">
+    <div>Title: {{ $ctrl.data.title }}</div>
+</div>
